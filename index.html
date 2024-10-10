@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Legatura dintre html si js</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <div id="myDiv">
+        My text...
+    </div>
+
+    <section>
+        <h2>Accesarea elementelor dupa nume de clasa</h2>
+        
+        <p class="error" >Something is wrong!</p>
+        <p class="error">Something is worse!</p>
+        <p class="error important">Critical error!</p>
+    </section>
+
+    <section>
+        <h2>Accesarea elem dupa atributul "name"</h2>
+
+        <label for="dogs">Dogs:</label>
+        <input type="checkbox" name="animal" id="dogs">
+
+        <label for="cats">Cats:</label>
+        <input type="checkbox" name="animal" id="cats">
+    </section>
+
+    <script src="./index.js"></script>
 </body>
 </html>
