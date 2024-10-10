@@ -66,4 +66,27 @@ subtitle.textContent = "This subtitle was added with js";
 const toDelete = document.querySelector("#delete-me");
 toDelete.remove();
 
+//adaugarea de ascultatori de evenimente(functii ce se apeleaza cand apare un eveniment
+const btn1 = document.querySelector("#click-me");
+let clickLimit = 3;
+let currentClickCount = 0;
+const onClick = () => {
+    alert("Button was clicked");
+    currentClickCount ++;
+    if(currentClickCount === clickLimit) {
+        btn1.removeEventListener("click", onClick);
+    }
+}
+btn1.addEventListener("click", onClick);
 
+//localStorage si sessionStorage
+//stocare de date in browser, si dupa ce inchidem si deschidem browserul
+
+// localStorage.setItem("importantData", "3 items in cart"); //s-a executat, s-au salvat, pot sa comentez linia
+const savedData = localStorage.getItem("importantData");
+console.log("savedData ", savedData);
+
+//stocare de date in browser, care se sterg dupa inchiderea aplicatiei
+sessionStorage.setItem("temporary", "Temporary data");
+const tempData = sessionStorage.getItem("temporary");
+console.log(tempData);
